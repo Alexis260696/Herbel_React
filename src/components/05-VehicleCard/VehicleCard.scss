@@ -1,0 +1,106 @@
+.car-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%; /* Tamaño fijo */
+  min-width: 30%;
+  height: 40vh; /* Tamaño fijo */
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(43, 43, 43, 0.8);
+}
+
+/* Posiciona el título en la parte superior */
+.car-title {
+  position: absolute;
+  top: 1vw;
+  left: 2vw;
+  color: white;
+  font-size: 1.75rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Estilo para el precio del auto (oculto inicialmente) */
+.car-price {
+  position: absolute;
+  top: 1vw;
+  left: 2vw;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: white;
+  display: none; /* Ocultar por defecto */
+  z-index: 2;
+}
+
+/* Estilo para los detalles del auto */
+.car-details {
+  background-color: #07070760;
+  padding: 0.5vw 2vw 0.5vw 2vw;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-bottom: 2vw;
+}
+
+.detail-item i {
+  padding-right: .3rem;
+}
+
+/* Estilo para el botón de renta */
+.rent-button {
+  display: block;
+  background-color: red;
+  color: white;
+  padding: .5vw 1vw;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer; /* Esto hace que el cursor se convierta en manita al pasar por el botón */
+}
+
+.car-card .car-details .button-hide {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+.car-card:hover .car-details {
+  padding: 0px;
+}
+
+/* Mostrar el precio al hacer hover y ocultar el título */
+.car-card:hover .car-price {
+  display: block;
+}
+
+.car-card:hover .car-title {
+  display: none;
+}
+
+.car-card:hover .car-details .detail-item {
+  display: none;
+}
+
+.car-card:hover .car-details .button-hide {
+  display: block;
+}
+
+/* Efecto hover en la tarjeta */
+.car-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(49, 49, 49, 0.4);
+}
+
+.rent-button:hover {
+  color: white;
+  background-color: #cc0000;
+}

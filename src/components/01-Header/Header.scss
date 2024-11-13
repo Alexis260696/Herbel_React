@@ -1,0 +1,140 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  background-color: #2424247e;
+  color: #c4c4c4;
+  padding: 1vh 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &.scrolled {
+    background-color: rgba(24, 24, 24, 0.842);
+    box-shadow: 0 2px 10px rgba(65, 65, 65, 0.5);
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+
+    .logo {
+      height: 2.5rem;
+      padding: 0.5rem;
+      transition: filter 300ms;
+
+      img {
+        height: 100%;
+        width: auto;
+      }
+
+      &:hover {
+        filter: drop-shadow(0 0 0.5rem rgba(211, 211, 211, 0.67));
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 1rem;
+      @media screen and (max-width: 768px) {
+        display: flex;
+      }
+
+      .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #c4c4c4;
+        margin: 3px;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: red;
+        }
+      }
+
+      
+
+      &.open .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.open .bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      &.open .bar:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        position: relative;
+
+        a {
+          color: #c4c4c4;
+          text-decoration: none;
+          font-size: 1.2rem;
+          padding: 0.5rem 1rem;
+          transition: color 0.5s;
+
+          &:hover {
+            color: #ffffff;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: red;
+            transition: width 0.4s ease, left 0.6s ease;
+          }
+
+          &:hover::after {
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+
+      // Efecto desplegable para móviles
+      &.open {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(24, 24, 24, 0.47);
+        padding: 1rem;
+        z-index: 2;
+        border-radius: 0px 0px 5px 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        ul {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}
