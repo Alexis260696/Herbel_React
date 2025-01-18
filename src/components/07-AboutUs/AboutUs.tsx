@@ -1,11 +1,31 @@
 // src/components/AboutUs/AboutUs.tsx
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './AboutUs.scss';
 
-const AboutSection: React.FC = () => {
+interface AboutSection {
+    title: string;
+    description: string;
+    icon?: string; // URL del ícono o imagen opcional
+}
+
+const aboutContent: AboutSection[] = [
+    {
+        title: 'Nuestra Misión',
+        description: 'Para nosotros es muy importante ofrecer servicios en renta de autos confiables, seguros y accesibles, para satisfacer las necesidades de cada cliente.',
+    },
+    {
+        title: 'Nuestra Visión',
+        description: 'Permanecer como una empresa líder en renta de autos, reconocida por nuestra calidad de servicio, innovación y compromiso con el cliente.',
+    },
+    {
+        title: 'Nuestros Valores',
+        description: 'Puntualidad, integridad, excelencia y dedicación son los pilares que guían todo lo que hacemos en HERBEL.',
+    }
+];
+
+const AboutUs: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement | null>(null);
-    const [buttonText, setButtonText] = useState('Contact Us');
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -19,43 +39,37 @@ const AboutSection: React.FC = () => {
             { threshold: 0.1 }
         );
 
-        const elements = sectionRef.current?.querySelectorAll('.fade-in');
+        const elements = sectionRef.current?.querySelectorAll('.about-card, .about-image-card');
         elements?.forEach((el) => observer.observe(el));
 
         return () => observer.disconnect();
     }, []);
 
-    const handleMouseEnter = () => setButtonText('Reach Out');
-    const handleMouseLeave = () => setButtonText('Contact Us');
-
     return (
-        <section className="about-section" id="about-us" ref={sectionRef}>
-            <div className="content-container">
-                <div className="image-column fade-in"></div>
-                <div className="text-column fade-in">
-                    <h2>About Us</h2>
-                    <p>
-                        We are a team of dedicated professionals committed to delivering top-notch services that make a difference.
-                        Our mission is to provide innovative solutions tailored to your needs, ensuring quality, transparency, and trust.
-                    </p>
-                    <p>
-                        Our team combines years of experience with cutting-edge technology to help businesses grow and thrive.
-                        We believe in a personalized approach that ensures each client receives the attention they deserve.
-                    </p>
-                    <div className="cta-wrapper">
-                        <a
-                            href="https://example.com/contact"
-                            className="cta-button"
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
-                        >
-                            {buttonText}
-                        </a>
-                    </div>
+        <section className="section about-us-section" id="about-us" ref={sectionRef}>
+            <div className="wrap-title-section">
+                <h2>Sobre Nosotros</h2>
+            </div>
+            <div className="wrap-about">
+                {/* Cuadro de la imagen */}
+                <div className="about-card about-image-card">
+                    <img
+                        src="../../../public/imagenes/conocenos.jpg" // Ruta de la imagen destacada
+                        alt="HERBEL"
+                        className="about-featured-image"
+                    />
                 </div>
+                {/* Resto de los cuadros */}
+                {aboutContent.map((content, index) => (
+                    <div className="about-card" key={index}>
+                        {content.icon && <img src={content.icon} alt={`${content.title} icon`} className="about-icon" />}
+                        <h3>{content.title}</h3>
+                        <p>{content.description}</p>
+                    </div>
+                ))}
             </div>
         </section>
     );
 };
 
-export default AboutSection;
+export default AboutUs;

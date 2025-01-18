@@ -35,6 +35,7 @@ const CarFilter: React.FC<CarFilterProps> = ({ categories, selectedCategory, onS
                         onClick={() => onSelectCategory(category.id)}
                     >
                         {category.name}
+                        
                     </button>
                 ))}
             </div>

@@ -12,12 +12,12 @@ interface Service {
 const services: Service[] = [
     {
         title: 'Renta de Autos',
-        description: 'Ofrecemos una amplia gama de autos para renta, desde compactos hasta SUVs, con tarifas competitivas.',
+        description: 'Ofrecemos una amplia gama de autos para renta, desde un Compacto hasta una Van, con tarifas realmente atractivas.',
         icon: 'path/to/car-icon.png'
     },
     {
-        title: 'Servicio con Chofer',
-        description: 'Brindamos servicios con chofer para garantizar que disfrutes del mejor viaje.',
+        title: 'Servicios de Transportacion',
+        description: 'Brindamos servicios de transportacion ejecutiva para eventos sociales, culturales y deportivos.',
         icon: 'path/to/maintenance-icon.png'
     }
 ];
