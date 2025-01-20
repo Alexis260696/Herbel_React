@@ -8,7 +8,7 @@
   background: url('../../../public/imagenes/hero.jpg') no-repeat center center;
   background-size: cover;
   opacity: 0; /* Comienza invisible */
-  transition: opacity 0.5s ease-out; /* Aparición suave */
+  transition: opacity 0.5s ease-out;
 
   &.show {
     opacity: 1; /* Aparece cuando se añade la clase 'show' */
@@ -17,21 +17,20 @@
   &:before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
   }
 
   .hero-content {
     display: flex;
+    flex-direction: column;
     width: 80%;
+    max-width: 1200px;
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    justify-content: center;
+    padding: 2rem;
     color: #c4c4c4;
     z-index: 2;
     text-align: center;
@@ -39,43 +38,61 @@
     .card {
       width: 100%;
       padding: 2rem;
-    }
 
-    h1 {
-      font-size: 5vw;
-      margin-bottom: 0.5vw;
-      color: #c4c4c4;
-      @media screen and (max-width: 768px) {
-        font-size: 7vw;
-      }
-    }
-
-    p {
-      font-size: 3vw;
-      margin-bottom: 2rem;
-      padding: 0 0 1.5vw 0;
-      @media screen and (max-width: 768px) {
-        font-size: 5vw;
-      }
-    }
-
-    .hero-button {
-      padding: 0.7rem;
-      font-size: 1.8vw;
-      color: #c4c4c4;
-      background-color: #cc0000;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      @media screen and (max-width: 768px) {
-        font-size: 3vw;
+      h1 {
+        font-size: clamp(2rem, 5vw, 4rem);
+        margin-bottom: 1rem;
+        color: #c4c4c4;
       }
 
-      &:hover {
-        color: white;
-        background-color: #ff0000;
+      p {
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+
+        /* Clases de animación */
+        &.fade-in {
+          opacity: 1;
+          transition: opacity 0.5s ease-in;
+        }
+
+        &.fade-out {
+          opacity: 0;
+          transition: opacity 0.5s ease-out;
+        }
+      }
+
+      .hero-button {
+        padding: 0.7rem 2rem;
+        font-size: clamp(1rem, 1.8vw, 1.5rem);
+        color: #c4c4c4;
+        background-color: #cc0000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+
+        &:hover {
+          color: white;
+          background-color: #ff0000;
+          transform: scale(1.05);
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
       }
     }
   }
+}
+
+/* Clases globales de animación */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
 }

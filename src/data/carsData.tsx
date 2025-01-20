@@ -17,9 +17,9 @@ import { Car } from '../models/Car';
 // Exportar las categorías
 export const categories = [
     { id: 1, name: "Compacto" },
-    { id: 2, name: "sedan" },
+    { id: 2, name: "SubCompacto" },
     { id: 3, name: "SUV" },
-    { id: 4, name: "Camioneta" },
+    { id: 4, name: "Van" },
 ];
 
 // Exportar los datos de los coches por categoría
@@ -62,7 +62,7 @@ export const carData: Record<string, Car[]> = {
             categoria: "Compacto",
         },
     ],
-    sedan: [
+    subcompacto: [
         {
             id: 4,
             name: "Nissan Altima",
@@ -73,7 +73,7 @@ export const carData: Record<string, Car[]> = {
             airConditioning: true,
             largeLuggage: 2,
             smallLuggage: 3,
-            categoria: "Sedán",
+            categoria: "SubCompacto",
         },
         {
             id: 5,
@@ -85,7 +85,7 @@ export const carData: Record<string, Car[]> = {
             airConditioning: true,
             largeLuggage: 3,
             smallLuggage: 2,
-            categoria: "Sedán",
+            categoria: "SubCompacto",
         },
         {
             id: 6,
@@ -97,7 +97,7 @@ export const carData: Record<string, Car[]> = {
             airConditioning: true,
             largeLuggage: 2,
             smallLuggage: 2,
-            categoria: "Sedán",
+            categoria: "SubCompacto",
         },
     ],
     suv: [
@@ -138,7 +138,7 @@ export const carData: Record<string, Car[]> = {
             categoria: "SUV",
         },
     ],
-    camioneta: [
+    van: [
         {
             id: 10,
             name: "Ford F-150",
@@ -149,7 +149,7 @@ export const carData: Record<string, Car[]> = {
             airConditioning: true,
             largeLuggage: 4,
             smallLuggage: 2,
-            categoria: "Camioneta",
+            categoria: "Van",
         },
         {
             id: 11,
@@ -161,7 +161,7 @@ export const carData: Record<string, Car[]> = {
             airConditioning: true,
             largeLuggage: 4,
             smallLuggage: 3,
-            categoria: "Camioneta",
+            categoria: "Van",
         },
         {
             id: 12,
@@ -173,7 +173,7 @@ export const carData: Record<string, Car[]> = {
             airConditioning: true,
             largeLuggage: 4,
             smallLuggage: 3,
-            categoria: "Camioneta",
+            categoria: "Van",
         },
     ],
 };

@@ -24,14 +24,11 @@
       height: 2.5rem;
       padding: 0.5rem;
       transition: filter 300ms;
+      filter: drop-shadow(0 0 0.5rem rgba(211, 211, 211, 0.67));
 
       img {
         height: 100%;
         width: auto;
-      }
-
-      &:hover {
-        filter: drop-shadow(0 0 0.5rem rgba(211, 211, 211, 0.67));
       }
     }
 
