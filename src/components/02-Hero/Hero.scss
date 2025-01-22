@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  background: url('../../../public/imagenes/hero.jpg') no-repeat center center;
+  background: url('../../../public/imagenes/sienna_pro.avif') no-repeat center center;
   background-size: cover;
   opacity: 0; /* Comienza invisible */
   transition: opacity 0.5s ease-out;
@@ -27,7 +27,7 @@
     flex-direction: column;
     width: 80%;
     max-width: 1200px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.459);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 2rem;

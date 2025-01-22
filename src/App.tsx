@@ -11,6 +11,7 @@ import ServicesSection from './components/06-Services/Services';
 import AboutSection from './components/07-AboutUs/AboutUs';
 import ContactSection from './components/08-Contact/Contact';
 import Footer from './components/09-Footer/Footer';
+import FreeServices from './components/10-freeServices/freeServices';
 
 const App: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
@@ -37,6 +38,7 @@ const App: React.FC = () => {
     <div>
       <Header />
       <Hero />
+      <AboutSection />
       <CarFilter 
         categories={categories} 
         selectedCategory={selectedCategory} 
@@ -49,7 +51,7 @@ const App: React.FC = () => {
         )}
 
       <ServicesSection />
-      <AboutSection />
+      <FreeServices />
       <ContactSection />
       <Footer />
     </div>

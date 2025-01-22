@@ -51,7 +51,7 @@ const ServicesSection: React.FC = () => {
             <div className="wrap-services">
                 {services.map((service, index) => (
                     <div className="service-card" key={index}>
-                        {service.icon && <img src={service.icon} alt={`${service.title} icon`} className="service-icon" />}
+                        {/* {service.icon && <img src={service.icon} alt={`${service.title} icon`} className="service-icon" />} */}
                         <h3>{service.title}</h3>
                         <p>{service.description}</p>
                     </div>
