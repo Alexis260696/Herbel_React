@@ -15,11 +15,15 @@
 
     .wrap-about {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
+        grid-template-columns: repeat(4, 1fr); // 4 columnas en la fila
+        gap: 25px; // Espaciado uniforme entre tarjetas
+        justify-items: center; // Centra las tarjetas de forma uniforme
+        max-width: 1400px; // Ajuste según el diseño deseado
+        margin: 0 auto; // Centrado horizontal del contenedor
     }
 
     .about-card {
+        margin: 0 auto; // Centra individualmente cada tarjeta
         background-color: #202020;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -32,13 +36,6 @@
         &.in-view {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        .about-icon {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
-            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
         }
 
         h3 {
@@ -78,14 +75,21 @@
         }
     }
 
+    @media (max-width: 1024px) {
+        .wrap-about {
+            grid-template-columns: repeat(2, 1fr); // 2 columnas en pantallas más pequeñas
+        }
+    }
+
     @media (max-width: 768px) {
         .wrap-about {
+            display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .about-card {
-            width: 80%;
+            width: 75vw;
             max-width: 500px;
         }
     }

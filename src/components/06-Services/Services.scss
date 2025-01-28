@@ -16,10 +16,15 @@
     .wrap-services {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Ajusta automáticamente las columnas
-        gap: 20px; // Espaciado uniforme entre cuadros
+        gap: 25px; // Espaciado uniforme entre cuadros
+        justify-content: center; // Centrar en el eje horizontal
+        max-width: 1200px; // Ajusta según el diseño deseado
+        margin: 0 auto; // Centra horizontalmente
+
     }
 
     .service-card {
+        margin: 0 auto; // Centra individualmente cada tarjeta
         background-color: #202020;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -32,13 +37,6 @@
         &.in-view {
             opacity: 1;
             transform: translateY(0);
-        }
-
-        .service-icon {
-            width: 60px; // Ajustado para coincidir con la sección About Us
-            height: 60px;
-            margin-bottom: 15px;
-            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.2));
         }
 
         h3 {
@@ -67,8 +65,7 @@
         }
 
         .service-card {
-            width: 80%;
-            max-width: 500px;
+            width: 75VW;
         }
     }
 }
