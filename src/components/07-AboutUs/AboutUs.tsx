@@ -54,7 +54,7 @@ const AboutUs: React.FC = () => {
                 {/* Cuadro de la imagen */}
                 <div className="about-card about-image-card">
                     <img
-                        src="public/imagenes/conocenos.jpg" // Ruta de la imagen destacada
+                        src="imagenes/conocenos.jpg" // Ruta de la imagen destacada
                         alt="HERBEL"
                         className="about-featured-image"
                     />
