@@ -48,7 +48,7 @@ const AboutUs: React.FC = () => {
     return (
         <section className="section about-us-section" id="about-us" ref={sectionRef}>
             <div className="wrap-title-section">
-                <h2>Sobre Nosotros</h2>
+                <h2>Acerca de</h2>
             </div>
             <div className="wrap-about">
                 {/* Cuadro de la imagen */}
