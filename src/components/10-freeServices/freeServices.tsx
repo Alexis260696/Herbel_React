@@ -12,17 +12,17 @@ interface Service {
 const freeServicesContent: Service[] = [
     {
         title: 'Seguro ',
-        description: 'Todos nuestros autos incluyen seguro básico para garantizar tu tranquilidad durante el viaje.',
+        description: 'Todos nuestros autos incluyen seguro para garantizar tu tranquilidad durante el viaje.',
         icon: '../../../public/icons/insurance.png',
     },
     {
         title: 'Asistencia 24/7',
-        description: 'Contamos con asistencia telefonica disponible las 24 horas, los 7 días de la semana.',
+        description: 'Contamos con asistencia telefónica disponible las 24 horas, los 7 días de la semana.',
         icon: '../../../public/icons/assistance.png',
     },
     {
         title: 'Kilometraje ilimitado',
-        description: 'Viaja sin preocupaciones, ya que no hay límite en el número de kilómetros recorridos.',
+        description: 'Viaja sin preocupaciones, con kilometraje libre.',
         icon: '../../../public/icons/unlimited.png',
     },
     {
@@ -32,7 +32,7 @@ const freeServicesContent: Service[] = [
     },
     {
         title: 'Silla de bebé',
-        description: 'silla de bebe ergonomica para que los mas pequeños tambien disfruten del viaje. (sujeto a disponibilidad)',
+        description: 'Silla de bebé ergonómica para que los más pequeños también disfruten del viaje. (sujeto a disponibilidad)',
         icon: '../../../public/icons/gps.png',
     }
 ];

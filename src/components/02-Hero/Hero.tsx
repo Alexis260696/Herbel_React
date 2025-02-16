@@ -7,9 +7,9 @@ const Hero = () => {
     const [fade, setFade] = useState(true);
 
     const messages = [
-        "Disfruta de la mejor experiencia en alquiler de autos.",
+        "Disfrute de la mejor experiencia en alquiler de autos.",
         "Con el placer de servirle.",
-        "Somos personas atendiendo personas."
+        "Somos personas atendiendo a personas."
     ];
 
     useEffect(() => {

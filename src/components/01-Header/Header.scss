@@ -4,13 +4,13 @@
   left: 0;
   width: 100vw;
   z-index: 1000;
-  background-color: #2424247e;
+  background-color: #24242456;
   color: #c4c4c4;
   padding: 1vh 0;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
   &.scrolled {
-    background-color: rgba(24, 24, 24, 0.842);
+    background-color: rgba(24, 24, 24,);
     box-shadow: 0 2px 10px rgba(65, 65, 65, 0.5);
   }
 
@@ -21,10 +21,10 @@
     padding: 0 5vw;
 
     .logo {
-      height: 2.5rem;
+      height: 4rem;
       padding: 0.5rem;
       transition: filter 300ms;
-      filter: drop-shadow(0 0 0.5rem rgba(211, 211, 211, 0.67));
+      filter: drop-shadow(0 0 1rem rgba(233, 233, 233, 0.67));
 
       img {
         height: 100%;

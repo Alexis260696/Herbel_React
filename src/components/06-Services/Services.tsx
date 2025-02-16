@@ -16,8 +16,8 @@ const services: Service[] = [
         icon: 'path/to/car-icon.png'
     },
     {
-        title: 'Servicios de Transportacion',
-        description: 'Brindamos servicios de transportacion ejecutiva para eventos sociales, culturales y deportivos.',
+        title: 'Transportación Ejecutiva',
+        description: 'Brindamos servicios con choferes expertos en eventos empresariales, sociales, culturales y deportivos.',
         icon: 'path/to/maintenance-icon.png'
     }
 ];

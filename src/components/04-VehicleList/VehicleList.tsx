@@ -11,9 +11,11 @@ interface VehicleListProps {
 const VehicleList: React.FC<VehicleListProps> = ({ vehicles }) => {
   return (
     <div className="vehicle-list" >
-      {vehicles.map((vehicle) => (
-        <VehicleCard key={vehicle.id} car={vehicle} />
-      ))}
+      <div className="card-container">
+        {vehicles.map((vehicle) => (
+          <VehicleCard key={vehicle.id} car={vehicle} />
+        ))}
+      </div>
     </div>
   );
 };

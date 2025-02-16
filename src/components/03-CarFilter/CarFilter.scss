@@ -1,9 +1,11 @@
 .category-filters {
+    width: 100vw;
     max-width: 100vw;
     display: flex;
     flex-direction: column; // Coloca el título arriba y los botones debajo
     align-items: center; // Centra el contenido
     margin: 0 0 3vw 0;
+    background-color: #242424;
 
     .wrap-title-section {
         text-align: center;

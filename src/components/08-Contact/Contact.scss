@@ -1,11 +1,9 @@
-.contact-section {
-    max-width: 100vw;
-    padding: 60px 20px;
-    background-color: #ee;
-    justify-content: center; // Centrar en el eje horizontal
-    max-width: 1200px; // Ajusta según el diseño deseado
-    margin: 0 auto; // Centra horizontalmente
-
+.contact-section { 
+    width: 100vw;
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente en la pantalla */
 
     .wrap-title-section {
         text-align: center;
@@ -20,28 +18,31 @@
 
     .wrap-two-column {
         display: flex;
-        flex-direction: row;
-        gap: 40px;
-        justify-content: center;
-        align-items: flex-start;
-        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 30px;
+        padding-bottom: 3rem;
+
+
 
         .wrap-form, .wrap-map {
-            margin: 0 auto; // Centra individualmente cada tarjeta
-
-            flex: 1 1 45%;
             background-color: #202020;
-            padding: 3rem;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            min-height: 400px; /* Asegura alturas iguales */
-            display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Para que los contenidos se alineen */
+            padding: 1rem;
+
+            &:hover {
+                background-color: #1c1c1c;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                transform: scale(1.02);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                
+            }
         }
     }
 
     .wrap-form {
+        width: 25%;
         h3 {
             font-size: 1.8rem;
             color: #c4c4c4;
@@ -64,13 +65,18 @@
                 font-size: 1rem;
                 border: 1px solid #ddd;
                 border-radius: 5px;
-                transition: all 0.3s ease;
+                transition: all 0.3s ease; 
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
                 &:focus {
                     outline: none;
                     border-color: #c4c4c4;
                     box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
                 }
+            }
+
+            textarea {
+                height: 7rem;
             }
 
             .cta-button {
@@ -91,27 +97,30 @@
     }
 
     .wrap-map {
+        width: 65%;
         iframe {
             border-radius: 8px;
             border: 0;
             width: 100%;
-            height: 100%; /* Asegura que ocupe el espacio completo */
+            height: 100%; 
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            flex-grow: 1; /* Ocupa el espacio vertical restante */
+            flex-grow: 1; 
         }
     }
 
     @media (max-width: 768px) {
         .wrap-two-column {
-            justify-content: center; // Centrar en el eje horizontal
-
-            flex-direction: column;
-            gap: 20px;
+            flex-direction: column; 
+            align-items: center;
+            width: 100%;
         }
 
         .wrap-form, .wrap-map {
-            justify-content: center; // Centrar en el eje horizontal
-            width: 75VW;
+            width: 85%; 
+        }
+
+        .wrap-map {
+            height: 25rem;
         }
     }
 }

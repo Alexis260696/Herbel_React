@@ -7,11 +7,11 @@
   position: relative;
   background: url('../../../public/imagenes/sienna_pro.avif') no-repeat center center;
   background-size: cover;
-  opacity: 0; /* Comienza invisible */
+  opacity: 0;
   transition: opacity 0.5s ease-out;
 
   &.show {
-    opacity: 1; /* Aparece cuando se añade la clase 'show' */
+    opacity: 1; 
   }
 
   &:before {
@@ -26,7 +26,6 @@
     display: flex;
     flex-direction: column;
     width: 80%;
-    max-width: 1200px;
     background-color: rgba(0, 0, 0, 0.459);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -37,7 +36,6 @@
 
     .card {
       width: 100%;
-      padding: 2rem;
 
       h1 {
         font-size: clamp(2rem, 5vw, 4rem);

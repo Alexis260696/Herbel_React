@@ -17,7 +17,7 @@ const CarFilter: React.FC<CarFilterProps> = ({ categories, selectedCategory, onS
         <div className="category-filters" id='vehicles'>
             {/* El título se mantiene arriba */}
             <div className="wrap-title-section">
-                <h2>Vehiculos</h2>
+                <h2>Vehículos</h2>
             </div>
             
             {/* Botones de filtro */}

@@ -1,6 +1,9 @@
 #services {
-    padding: 60px 20px;
+    width: 100vw;
     background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .wrap-title-section {
         text-align: center;
@@ -14,17 +17,15 @@
     }
 
     .wrap-services {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Ajusta automáticamente las columnas
-        gap: 25px; // Espaciado uniforme entre cuadros
-        justify-content: center; // Centrar en el eje horizontal
-        max-width: 1200px; // Ajusta según el diseño deseado
-        margin: 0 auto; // Centra horizontalmente
-
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        max-width: 80vw;
+        padding-bottom: 3rem;
     }
 
     .service-card {
-        margin: 0 auto; // Centra individualmente cada tarjeta
         background-color: #202020;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -33,6 +34,8 @@
         opacity: 0;
         transform: translateY(30px);
         transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        width: calc(33.33% - 20px); /* 3 columnas con espacio */
+        max-width: 350px;
 
         &.in-view {
             opacity: 1;
@@ -48,7 +51,7 @@
         p {
             color: #c4c4c4;
             font-size: 1em;
-            line-height: 1.5; // Mejora la legibilidad en párrafos largos
+            line-height: 1.5;
         }
 
         &:hover {
@@ -59,13 +62,19 @@
         }
     }
 
+    @media (max-width: 1024px) {
+        .service-card {
+            width: calc(50% - 20px); /* 2 columnas en pantallas medianas */
+        }
+    }
+
     @media (max-width: 768px) {
         .wrap-services {
-            grid-template-columns: 1fr; // Muestra una columna en pantallas pequeñas
+            flex-direction: column;
+            align-items: center;
         }
 
         .service-card {
-            width: 75VW;
-        }
+            width: 50vw;        }
     }
 }

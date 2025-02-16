@@ -16,15 +16,15 @@ import { Car } from '../models/Car';
 
 // Exportar las categorías
 export const categories = [
-    { id: 1, name: "Compacto" },
-    { id: 2, name: "SubCompacto" },
+    { id: 1, name: "Chico" },
+    { id: 2, name: "Mediano" },
     { id: 3, name: "SUV" },
     { id: 4, name: "Van" },
 ];
 
 // Exportar los datos de los coches por categoría
 export const carData: Record<string, Car[]> = {
-    compacto: [
+    chico: [
         {
             id: 1,
             name: "Ford Fiesta",
@@ -62,7 +62,7 @@ export const carData: Record<string, Car[]> = {
             categoria: "Compacto",
         },
     ],
-    subcompacto: [
+    mediano: [
         {
             id: 4,
             name: "Nissan Altima",

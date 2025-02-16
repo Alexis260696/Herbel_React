@@ -1,6 +1,9 @@
 #free-services {
-    padding: 60px 20px;
+    width: 100vw;
     background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .wrap-title-section {
         text-align: center;
@@ -14,16 +17,15 @@
     }
 
     .wrap-services {
-        display: grid;
-        grid-template-columns: repeat(3, 2fr); // 4 columnas en la fila
-        gap: 25px; // Espaciado uniforme entre tarjetas
-        justify-items: center; // Centra las tarjetas de forma uniforme
-        max-width: 1200px; // Ajusta el contenedor según el diseño deseado
-        margin: 0 auto; // Centrado horizontal del contenedor
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        width: 90%;
+        padding: 3rem;
     }
 
     .service-card {
-        margin: 0 auto; // Centra individualmente cada tarjeta
         background-color: #202020;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -32,6 +34,8 @@
         opacity: 0;
         transform: translateY(30px);
         transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        width: calc(25% - 20px); /* 3 columnas con espacio */
+        max-width: 350px; /* Límite de tamaño */
 
         &.in-view {
             opacity: 1;
@@ -66,21 +70,19 @@
     }
 
     @media (max-width: 1024px) {
-        .wrap-services {
-            grid-template-columns: repeat(2, 1fr); // 2 columnas en pantallas medianas
+        .service-card {
+            width: calc(50% - 20px); /* 2 columnas en pantallas medianas */
         }
     }
 
     @media (max-width: 768px) {
         .wrap-services {
-            display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .service-card {
-            width: 75vw;
-            max-width: 500px;
+            width: 50vw;
         }
     }
 }

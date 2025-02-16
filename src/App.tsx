@@ -12,7 +12,6 @@ import AboutSection from './components/07-AboutUs/AboutUs';
 import ContactSection from './components/08-Contact/Contact';
 import Footer from './components/09-Footer/Footer';
 import FreeServices from './components/10-freeServices/freeServices';
-import { Whatsapp_button } from './components/Whatsapp_button/Whatsapp_button';
 
 const App: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
@@ -36,7 +35,7 @@ const App: React.FC = () => {
   const carsToDisplay = getCarsByCategory();
 
   return (
-    <div>
+    <div >
       <Header />
       <Hero />
       {/* <Whatsapp_button/> */}
