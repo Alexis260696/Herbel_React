@@ -12,6 +12,7 @@ import AboutSection from './components/07-AboutUs/AboutUs';
 import ContactSection from './components/08-Contact/Contact';
 import Footer from './components/09-Footer/Footer';
 import FreeServices from './components/10-freeServices/freeServices';
+import RequirementsSection from './components/11-requirements/requirements';
 
 const App: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
@@ -53,6 +54,7 @@ const App: React.FC = () => {
 
       <ServicesSection />
       <FreeServices />
+      <RequirementsSection/>
       <ContactSection />
       <Footer />
     </div>

@@ -52,6 +52,9 @@ const Header: React.FC = () => {
               <a href="#services" onClick={closeMenu}>Servicios</a>
             </li>
             <li>
+              <a href="#requisitos" onClick={closeMenu}>Requisitos</a>
+            </li>
+            <li>
               <a href="#contact" onClick={closeMenu}>Contacto</a>
             </li>
           </ul>
