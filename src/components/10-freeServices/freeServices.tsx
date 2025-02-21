@@ -61,7 +61,7 @@ const FreeServices: React.FC = () => {
     return (
         <section className="section free-services-section" id="free-services" ref={sectionRef}>
             <div className="wrap-title-section">
-                <h2>Servicios Incluidos</h2>
+                <h3>Sin costo extra</h3>
             </div>
             <div className="wrap-services">
                 {freeServicesContent.map((service, index) => (

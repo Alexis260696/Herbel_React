@@ -5,17 +5,6 @@
     flex-direction: column;
     justify-content: center; /* Centra verticalmente en la pantalla */
 
-    .wrap-title-section {
-        text-align: center;
-        margin-bottom: 3rem;
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #c4c4c4;
-        }
-    }
-
     .wrap-two-column {
         display: flex;
         justify-content: center; 

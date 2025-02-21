@@ -1,17 +1,14 @@
-#root {
-  margin: 0 auto;
-  text-align: center;
-  background-color: #242424;
-  width: 100vw;
-}
+.wrap-title-section {
+    text-align: center;
+    padding-top: 3rem;
 
-body {
-  width: 100vw;
-  font-size: 32px;
-  background-color: #242424;
+    h2 {
+        font-size: 4rem;
+        color: #c4c4c4;
+    }
 
-}
-
-.car-list {
-  max-width: 100vw;
+    h3 {
+        font-size: 2.5rem;
+        color: #c4c4c4;
+    }
 }

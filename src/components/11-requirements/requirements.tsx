@@ -1,4 +1,4 @@
-// src/components/AboutUs/AboutUs.tsx
+// src/components/Requirements/Requirements.tsx
 
 import React, { useEffect, useRef } from 'react';
 import './requirements.scss';
@@ -11,19 +11,19 @@ interface Requirements {
 const RequirementsContent: Requirements[] = [
     {
         title: 'Tarjeta de Crédito',
-        description: 'Se requiere una tarjeta de crédito válida para asegurar la renta y cubrir cualquier cargo adicional o depósito.',
+        description: 'Presentar tarjeta de crédito física (Visa o Mastercard) para depósito en garantía (el monto dependerá del vehículo de su preferencia). *No aceptamos American Express.',
     },
     {
         title: 'Licencia de Conducir',
-        description: 'Es necesario presentar una licencia de conducir vigente para confirmar la autorización para operar el vehículo.',
+        description: 'Es necesario presentar licencia de conducir vigente.',
     },
     {
         title: 'Identificación Oficial',
-        description: 'Se solicita una identificación oficial para la verificación de identidad. Los residentes mexicanos deben presentar su INE (Instituto Nacional Electoral).',
+        description: 'INE o Pasaporte vigente.',
     }
 ];
 
-const AboutUs: React.FC = () => {
+const Requirements: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -38,29 +38,29 @@ const AboutUs: React.FC = () => {
             { threshold: 0.1 }
         );
 
-        const elements = sectionRef.current?.querySelectorAll('.about-card, .about-image-card');
+        const elements = sectionRef.current?.querySelectorAll('.requirement-card, .requirement-image-card');
         elements?.forEach((el) => observer.observe(el));
 
         return () => observer.disconnect();
     }, []);
 
     return (
-        <section className="section about-us-section" id="about-us" ref={sectionRef}>
+        <section className="section requirements-section" id="requirements" ref={sectionRef}>
             <div className="wrap-title-section">
                 <h2>Requisitos</h2>
             </div>
-            <div className="wrap-about">
+            <div className="wrap-requirements">
                 {/* Cuadro de la imagen */}
-                <div className="about-card about-image-card">
+                <div className="requirement-card requirement-image-card">
                     <img
                         src="imagenes/volvo.jpg" // Ruta de la imagen destacada
                         alt="HERBEL"
-                        className="about-featured-image"
+                        className="requirement-featured-image"
                     />
                 </div>
                 {/* Resto de los cuadros */}
                 {RequirementsContent.map((content, index) => (
-                    <div className="about-card" key={index}>
+                    <div className="requirement-card" key={index}>
                         <h3>{content.title}</h3>
                         <p>{content.description}</p>
                     </div>
@@ -70,4 +70,4 @@ const AboutUs: React.FC = () => {
     );
 };
 
-export default AboutUs;
+export default Requirements;

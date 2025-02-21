@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScrolled(true);
-        setIsOpen(false); // Cerrar el menú al hacer scroll
+        setIsOpen(false); 
       } else {
         setIsScrolled(false);
       }

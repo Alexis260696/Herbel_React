@@ -4,11 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   background: url('../../../public/imagenes/sienna_pro.avif') no-repeat center center;
   background-size: cover;
   opacity: 0;
   transition: opacity 0.5s ease-out;
+ 
 
   &.show {
     opacity: 1; 
@@ -33,6 +33,13 @@
     color: #c4c4c4;
     z-index: 2;
     text-align: center;
+    @media screen and (max-width: 768px) {
+      width: 70%;
+      background-color:  rgba(24, 24, 24, 0.726);
+
+
+    }
+    
 
     .card {
       width: 100%;
