@@ -11,7 +11,7 @@ interface Requirements {
 const RequirementsContent: Requirements[] = [
     {
         title: 'Tarjeta de Crédito',
-        description: 'Presentar tarjeta de crédito física (Visa o Mastercard) para depósito en garantía (el monto dependerá del vehículo de su preferencia). *No aceptamos American Express.',
+        description: 'Presentar tarjeta de crédito física (Visa o Mastercard) para depósito en garantía (el monto dependerá del vehículo de su preferencia).\n*No aceptamos American Express.',
     },
     {
         title: 'Licencia de Conducir',
@@ -19,7 +19,7 @@ const RequirementsContent: Requirements[] = [
     },
     {
         title: 'Identificación Oficial',
-        description: 'INE o Pasaporte vigente.',
+        description: 'INE \nó\n Pasaporte vigente.',
     }
 ];
 
@@ -51,18 +51,14 @@ const Requirements: React.FC = () => {
             </div>
             <div className="wrap-requirements">
                 {/* Cuadro de la imagen */}
-                <div className="requirement-card requirement-image-card">
-                    <img
-                        src="imagenes/volvo.jpg" // Ruta de la imagen destacada
-                        alt="HERBEL"
-                        className="requirement-featured-image"
-                    />
-                </div>
+                <div className="requirement-card requirement-image-card"></div>
+
                 {/* Resto de los cuadros */}
                 {RequirementsContent.map((content, index) => (
                     <div className="requirement-card" key={index}>
                         <h3>{content.title}</h3>
-                        <p>{content.description}</p>
+                        {/* Aquí aplicamos whiteSpace: 'pre-line' para que \n funcione */}
+                        <p style={{ whiteSpace: 'pre-line' }}>{content.description}</p>
                     </div>
                 ))}
             </div>

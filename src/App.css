@@ -1,10 +1,11 @@
 .wrap-title-section {
     text-align: center;
-    padding-top: 3rem;
+    padding: 110px;
 
     h2 {
         font-size: 4rem;
         color: #c4c4c4;
+        margin: 0;
     }
 
     h3 {

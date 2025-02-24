@@ -53,11 +53,6 @@ const AboutUs: React.FC = () => {
             <div className="wrap-about">
                 {/* Cuadro de la imagen */}
                 <div className="about-card about-image-card">
-                    <img
-                        src="imagenes/conocenos.jpg" // Ruta de la imagen destacada
-                        alt="HERBEL"
-                        className="about-featured-image"
-                    />
                 </div>
                 {/* Resto de los cuadros */}
                 {aboutContent.map((content, index) => (

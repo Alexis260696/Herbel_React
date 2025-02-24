@@ -1,34 +1,57 @@
 .wrap-requirements {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; // Espacio entre tarjetas
+    gap: 25px; 
     justify-content: center;
 
     .requirement-card {
-        max-width: 300px; // Ancho máximo de cada tarjeta
+        width: 350px;
+        height: 250px;
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         background-color: #202020;
         text-align: center;
-        padding: 20px;
-        transition: transform 0.3s ease;
+        padding: 2rem;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+        &.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #c4c4c4;
+        }
+
+        p {
+            color: #c4c4c4;
+            font-size: 1em;
+            line-height: 1.5;
+        }
 
         &:hover {
-            transform: translateY(-5px);
+            background-color: #1c1c1c;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        &.requirement-image-card {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0;
 
-            .requirement-featured-image {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 8px;
-            }
-        }
     }
+}
+
+.requirement-image-card {
+    background-image: url('imagenes/c3/Honda_CR-V_lo_res_15_-_Honda_PR-696x464.jpg'); /* 🔄 Ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen al contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita repeticiones */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
 }
