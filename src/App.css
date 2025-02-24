@@ -1,15 +1,32 @@
 .wrap-title-section {
+    max-width: 100%;
     text-align: center;
     padding: 110px;
 
     h2 {
+        max-width: 100%;
         font-size: 4rem;
         color: #c4c4c4;
         margin: 0;
     }
-
+    
     h3 {
+        max-width: 100%;
         font-size: 2.5rem;
         color: #c4c4c4;
+    }
+}
+@media (max-width: 768px) {
+    .wrap-title-section {
+        display: flex;              
+        justify-content: center;    
+        align-items: center;       
+        padding: 85px;
+
+        h2 {
+            font-size: 3rem;           
+            max-width: 100%;       
+            text-align: center;     
+        }
     }
 }

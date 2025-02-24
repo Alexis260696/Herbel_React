@@ -47,19 +47,21 @@
     .category-filters {
         display: grid;
         grid-template-rows: auto;
-        justify-content: center;
+        justify-content: center; 
         align-items: center;
 
         .filter-buttons {
             display: grid;
-            grid-template-columns: 1fr 1fr ;
-            flex-direction: column;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center; 
             align-items: center;
-            gap: 15px;
+            gap: 25px
         }
 
         .filter-button {
-            width: auto;
+            width: 150px; 
+            text-align: center; 
         }
     }
+
 }

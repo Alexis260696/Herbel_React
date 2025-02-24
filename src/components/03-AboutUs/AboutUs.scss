@@ -7,8 +7,8 @@
 }
 
 .about-card {
-    width: 350px;
-    height: 250px;
+    width: 300px;
+    height: 200px;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     background-color: #202020;
@@ -32,7 +32,7 @@
 }
 
 .about-image-card {
-    background-image: url('imagenes/conocenos.jpg'); /* 🔄 Ruta de tu imagen */
+    background-image: url('/imagenes/conocenos.jpg'); /* 🔄 Ruta de tu imagen */
     background-size: cover; /* Ajusta la imagen al contenedor */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita repeticiones */
