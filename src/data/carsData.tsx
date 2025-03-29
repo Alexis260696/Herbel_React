@@ -15,7 +15,7 @@ export const carData: Record<string, Car[]> = {
     chico: [
         {
             id: 1,
-            name: "aveo",
+            name: "Aveo",
             price: "$700/día",
             description: "Un auto compacto ideal para la ciudad.",
             image: "imagenes/autos/png/aveo.png" ,
@@ -40,7 +40,7 @@ export const carData: Record<string, Car[]> = {
     ],
     mediano: [
         {
-            id: 4,
+            id: 3,
             name: "Rio",
             price: "$800/día",
             description: "Estilo y eficiencia para tus viajes.",
@@ -52,8 +52,8 @@ export const carData: Record<string, Car[]> = {
             categoria: "SubCompacto",
         },
         {
-            id: 5,
-            name: "versa",
+            id: 4,
+            name: "Versa",
             price: "$800/día",
             description: "Diseño elegante y tecnología avanzada.",
             image: "imagenes/autos/png/versa.png" ,
@@ -78,7 +78,7 @@ export const carData: Record<string, Car[]> = {
     ],
     suv: [
         {
-            id: 9,
+            id: 6,
             name: "Sorento",
             price: "$1600/día",
             description: "Un SUV práctico y cómodo para viajes.",
@@ -90,7 +90,7 @@ export const carData: Record<string, Car[]> = {
             categoria: "SUV",
         },
         {
-            id: 13,
+            id: 7,
             name: "Sienna",
             price: "$1500/día",
             description: "Un SUV versátil para aventuras familiares.",
@@ -102,7 +102,7 @@ export const carData: Record<string, Car[]> = {
             categoria: "SUV",
         },
         {
-            id: 13,
+            id: 8,
             name: "Creta",
             price: "$1250/día",
             description: "Un SUV versátil para aventuras familiares.",
@@ -116,7 +116,7 @@ export const carData: Record<string, Car[]> = {
     ],
     van: [    
         {
-            id: 14,
+            id: 9,
             name: "Avanza",
             price: "$1350/día",
             description: "Un SUV espacioso y confiable.",
@@ -125,7 +125,7 @@ export const carData: Record<string, Car[]> = {
             airConditioning: true,
             largeLuggage: 3,
             smallLuggage: 3,
-            categoria: "SUV",
+            categoria: "Van",
         },
         {
             id: 10,
