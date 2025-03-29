@@ -21,6 +21,7 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ car }) => {
 
     return (
         <div className="car-card" style={{ backgroundImage: `url(${car.image})` }}>
+            <div className="fondo"></div>
             <h3 className="car-title">{car.name}</h3>
             <p className="car-price">{car.price}</p>
             <div className="car-details">

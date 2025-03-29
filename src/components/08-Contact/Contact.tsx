@@ -23,7 +23,6 @@ const ContactSection: React.FC = () => {
         e.preventDefault();
 
         if (!formRef.current) return;
-
         emailjs.sendForm(
             import.meta.env.VITE_EMAILJS_SERVICE_ID!,
             import.meta.env.VITE_EMAILJS_TEMPLATE_ID!,
@@ -31,6 +30,7 @@ const ContactSection: React.FC = () => {
             import.meta.env.VITE_EMAILJS_PUBLIC_KEY!
         )
         .then((result) => {
+            console.log("hola")
             console.log(result.text);
             setSubmitted(true);
             setFormData({ from_name: '', from_email: '', message: '' });
