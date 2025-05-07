@@ -16,14 +16,16 @@ const freeServicesContent: Service[] = [
         icon: '../../../public/icons/insurance.png',
     },
     {
-        title: 'Asistencia 24/7',
-        description: 'Contamos con asistencia telefónica disponible las 24 horas, los 7 días de la semana.',
-        icon: '../../../public/icons/assistance.png',
-    },
-    {
         title: 'Kilometraje ilimitado',
         description: 'Viaja sin preocupaciones, con kilometraje libre.',
         icon: '../../../public/icons/unlimited.png',
+    }
+];
+const freeServicesContentfree: Service[] = [
+    {
+        title: 'Asistencia 24/7',
+        description: 'Contamos con asistencia telefónica disponible las 24 horas, los 7 días de la semana.',
+        icon: '../../../public/icons/assistance.png',
     },
     {
         title: 'GPS ',
@@ -61,10 +63,22 @@ const FreeServices: React.FC = () => {
     return (
         <section className="section free-services-section" id="free-services" ref={sectionRef}>
             <div className="wrap-title-section">
-                <h3>Sin costo extra</h3>
+                <h3>Incluye</h3>
             </div>
             <div className="wrap-services">
                 {freeServicesContent.map((service, index) => (
+                    <div className="service-card" key={index}>
+                        {/* {service.icon && <img src={service.icon} alt={`${service.title} icon`} className="service-icon" />} */}
+                        <h3>{service.title}</h3>
+                        <p>{service.description}</p>
+                    </div>
+                ))}
+            </div>
+            <div className="wrap-title-section">
+                <h3>Sin costo extra</h3>
+            </div>
+            <div className="wrap-services">
+                {freeServicesContentfree.map((service, index) => (
                     <div className="service-card" key={index}>
                         {/* {service.icon && <img src={service.icon} alt={`${service.title} icon`} className="service-icon" />} */}
                         <h3>{service.title}</h3>

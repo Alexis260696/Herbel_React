@@ -11,7 +11,8 @@ const VehicleCard: React.FC<VehicleCardProps> = ({ car }) => {
         e.preventDefault(); // Evita el comportamiento predeterminado del enlace
 
         console.log("Botón de WhatsApp clicado"); // Verificación
-        const phoneNumber = '523330601213';
+        // const phoneNumber = '523330601213';
+        const phoneNumber = '525618511585';
         const message = `Hola, estoy interesado en rentar el auto ${car.name}. ¿Podrías darme más información?`;
         const encodedMessage = encodeURIComponent(message);
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;

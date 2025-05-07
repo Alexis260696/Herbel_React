@@ -1,57 +1,91 @@
-.wrap-requirements {
+.requirements-section {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #242424;
     display: flex;
-    flex-wrap: wrap;
-    gap: 25px; 
-    justify-content: center;
-
-    .requirement-card {
-        width: 350px;
-        height: 250px;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        background-color: #202020;
-        text-align: center;
-        padding: 2rem;
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-
-        &.in-view {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: #c4c4c4;
-        }
-
-        p {
-            color: #c4c4c4;
-            font-size: 1em;
-            line-height: 1.5;
-        }
-
-        &:hover {
-            background-color: #1c1c1c;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            transform: scale(1.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-
-    }
-}
-
-.requirement-image-card {
-    background-image: url('/imagenes/c3/Honda_CR-V_lo_res_15_-_Honda_PR-696x464.jpg'); /* 🔄 Ruta de tu imagen */
-    background-size: cover; /* Ajusta la imagen al contenedor */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita repeticiones */
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-}
+  
+    .wrap-title-section {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+  
+      h3 {
+        color: white;
+        font-size: 2rem;
+      }
+    }
+  
+    .wrap-requirements {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+      gap: 1.5rem;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .requirement-card {
+      width: 300px;
+      min-height: 220px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      background-color: #202020;
+      text-align: center;
+      padding: 2rem;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+      &.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  
+      &:hover {
+        background-color: #1c1c1c;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+  
+      h3 {
+        font-size: 1.25rem;
+        color: white;
+        margin-bottom: 0.5rem;
+      }
+  
+      p {
+        color: #c4c4c4;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+    }
+  
+    .requirement-image-card {
+      background-image: url('/imagenes/c3/Honda_CR-V_lo_res_15_-_Honda_PR-696x464.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+  }
+  
+  // Escritorio
+  @media (min-width: 768px) {
+    .requirements-section {
+      .wrap-requirements {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+      }
+    }
+  }
+  

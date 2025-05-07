@@ -1,13 +1,12 @@
 .wrap-title-section {
-    max-width: 100%;
     text-align: center;
-    padding: 110px;
+    margin-bottom: 2rem;
+    align-items: center;
+
 
     h2 {
-        max-width: 100%;
-        font-size: 4rem;
         color: #c4c4c4;
-        margin: 0;
+        font-size: 4rem;
     }
     
     h3 {

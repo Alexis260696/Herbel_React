@@ -1,67 +1,96 @@
 .category-filters {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     background-color: #242424;
-
-    .filter-buttons {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 25px; 
+    padding: 2rem 1rem;
+  
+    .wrap-title-section {
+      text-align: center;
+      margin-bottom: 2rem;
+  
+      h2 {
+        color: white;
+        font-size: 2rem;
+      }
     }
-}
-
-.filter-button {
-    height: 2.5rem;
-    width: 15vw;
-    margin: 0;
+  
+    .filter-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      max-width: 800px;
+      width: 100%;
+  
+      // Primeros 4 en una fila normal
+      button:nth-child(-n+4) {
+        grid-column: span 1;
+      }
+  
+      // Botón 5, 6 y 7 centrados en la segunda fila
+      button:nth-child(5) {
+        grid-column-start: 2;
+      }
+  
+      button:nth-child(6) {
+        grid-column-start: 3;
+      }
+  
+      button:nth-child(7) {
+        grid-column-start: 4;
+      }
+    }
+  }
+  
+  .filter-button {
+    width: 100%;
+    max-width: 160px;
+    height: 3rem;
     padding: 0.5rem 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 2rem;
     background-color: lightgrey;
     color: black;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.filter-button:hover {
-    background-color: red;
-    transform: translateY(-1vh);
-    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.2);
-}
-
-.filter-button.active {
-    background-color: #cc0000;
-    color: white;
-    box-shadow: 0 0.7vh 1.5vh rgba(0, 0, 0, 0.3);
-    transform: translateY(0);
-    scale: 0.95;
-}
-
-.filter-button:focus {
-    outline: 2px solid rgba(0, 0, 0, 0.5);
-}
-
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-align: center;
+  
+    &:hover {
+      background-color: #c30000;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    &.active {
+      background-color: #cc0000;
+      color: white;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      transform: scale(0.97);
+    }
+  
+    &:focus {
+      outline: 2px solid rgba(255, 255, 255, 0.3);
+    }
+  }  
+  
 @media (max-width: 768px) {
-    .category-filters {
+    .filter-buttons {
         display: grid;
-        grid-template-rows: auto;
-        justify-content: center; 
-        align-items: center;
-
-        .filter-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            justify-items: center; 
-            align-items: center;
-            gap: 25px
-        }
-
-        .filter-button {
-            width: 150px; 
-            text-align: center; 
-        }
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        width: 100%;
+        padding: 0 1rem;
     }
 
+    .filter-button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.75rem;
+        text-align: center;
+        white-space: nowrap;
+    }
 }
+
+
