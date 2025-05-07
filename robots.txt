@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /static/
+Allow: /public/
+Allow: /static/js/
+Allow: /static/css/
+
+Disallow: /admin/
+Disallow: /login/
+
+Sitemap: https://your-site-name.com/sitemap.xml
